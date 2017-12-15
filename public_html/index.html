@@ -1,11 +1,7 @@
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Página com Bootstrap</title>
         <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -18,50 +14,142 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-md-6">
                     <fieldset>
-                        <legend> Dados do Paciente</legend>
+                        <legend>Dados do Paciente</legend>
                         <form method="post" action="#">
-                            <div class="form-group"> 
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" class="form-control">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" class="form-control">
                             </div>
                             <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" class="form-control">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Sexo:</label>
                                 <br>
                                 <label for="masculino" class="radio-inline">
-                                    <input type="radio" id="masculino" name="sexo" checked=>
+                                    <input type="radio" id="masculino" name="sexo" checked>
                                     Masculino
                                 </label>
                                 <label for="feminino" class="radio-inline">
-                                    <input type="radio" id="feminino" name="sexo" checked=>
+                                    <input type="radio" id="feminino" name="sexo">
                                     Feminino
                                 </label>
                                 <label for="outros" class="radio-inline">
-                                    <input type="radio" id="outros" name="sexo" checked=>
+                                    <input type="radio" id="outros" name="sexo">
                                     Outros
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label for="cidade">Cidade:</label>
                                 <select id="cidade" name="cidade" class="form-control">
-                                    <option disabled selected> Escolha a sua cidade</option>
+                                    <option selected disabled>Selecione a cidade...</option>
                                     <option value="natal">Natal</option>
                                     <option value="mossoro">Mossoró</option>
-                                    <option value="parnamirim">Parnamirim</option>
-                                    <option value="ceara-mirim">Ceará-Mirim</option>
                                     <option value="caico">Caicó</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Cadastrar" class="btn btn-primary">
-                                <input type="submit" value="Limpar" class="btn btn-danger">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="submit" value="Cadastrar" class="btn btn-primary btn-block">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="reset" value="Limpar" class="btn btn-danger btn-block">
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </fieldset>
                 </div>
+                <div class="col-md-6">
+                    <fieldset>
+                        <legend>Lista de Pacientes</legend>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Sexo</th>
+                                    <th>Cidade</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Weskley Bezerra</td>
+                                    <td>weskleymb@hotmail.com</td>
+                                    <td>Masculino</td>
+                                    <td>Natal</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <button type="submit" class="btn btn-danger btn-xs">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lúcio Flávio</td>
+                                    <td>luciof@gmail.com</td>
+                                    <td>Masculino</td>
+                                    <td>Natal</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <button type="submit" class="btn btn-danger btn-xs">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Janna Barboza</td>
+                                    <td>janna@yahoo.com</td>
+                                    <td>Feminino</td>
+                                    <td>Natal</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <button type="submit" class="btn btn-danger btn-xs">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Victor Matheus</td>
+                                    <td>victorm@outlook.com</td>
+                                    <td>Masculino</td>
+                                    <td>Natal</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        <button type="submit" class="btn btn-danger btn-xs">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Sexo</th>
+                                    <th>Cidade</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
                 </div>
             </div>
         </div>
